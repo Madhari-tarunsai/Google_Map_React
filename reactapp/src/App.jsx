@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import './App.css'; // External CSS
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+    <div className="container">
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+        <div className="left-section">
+          <h1>My Location</h1>
+          <h2>Address</h2>
+          <div className="address">
+            <p>6-5-133, Balanagar</p>
+            <p>Hyderabad</p>
+            <p><strong>PinCode No:</strong> 500042</p>
+          </div>
+        </div>
 
-export default App
+        <div className="right-section">
+          <iframe
+            title="Google Map"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=6-5-133,Balanagar+(My%20Location)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
+      
+    </div>
+  );
+};
+
+export default App;
